@@ -8,9 +8,29 @@
 
 #include <iostream>
 
+
 int main(int argc, const char * argv[]) {
-    int a;
-    scanf("%d", &a);
-    printf("You entered: %d", a);
+    
+    int n = 10;
+    int *a = new int[n];
+    
+    printf("Введите массив из 10ти чисел:");
+    
+    for (int i(0); i < n; i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    
+    for (int i = 0; i < n - 1; i++)
+        for (int j = 0; j < n - i - 1; j++)
+            if (a[j] > a[j + 1])std::swap(a[j], a[j + 1]);
+
+    printf("Отсортированный массив:");
+    
+    for (int i(0); i < n; i++)
+    {
+        printf("%d ",a[i]);
+    }
+
     
 }
