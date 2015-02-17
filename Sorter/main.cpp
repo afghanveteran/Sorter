@@ -11,10 +11,11 @@
 
 int main(int argc, const char * argv[]) {
     
-    int n = 10;
+    int n;
+    scanf("%d", &n);
     int *a = new int[n];
     
-    printf("Введите массив из 10ти чисел:");
+    printf("Введите массив из %d чисел:", n);
     
     for (int i(0); i < n; i++)
     {
@@ -25,7 +26,7 @@ int main(int argc, const char * argv[]) {
         for (int j = 0; j < n - i - 1; j++)
             if (a[j] > a[j + 1])std::swap(a[j], a[j + 1]);
 
-    printf("Отсортированный массив:");
+    printf("Отсортированный массив: ");
     
     for (int i(0); i < n; i++)
     {
