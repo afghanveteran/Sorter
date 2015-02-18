@@ -11,6 +11,7 @@
 
 int main(int argc, const char * argv[]) {
     
+    printf("Введите размер массива: ");
     int n;
     scanf("%d", &n);
     int *a = new int[n];
