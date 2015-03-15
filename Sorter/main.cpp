@@ -7,7 +7,13 @@
 //
 
 #include <iostream>
+#include "quicksort.h"
 
+/**
+ @param n - этот операнд хранит в себе кол-во элеметнов массива, введённое пользователем.
+ @param a[] - массив, хранящий сортируемые числа.
+
+*/
 
 int main(int argc, const char * argv[]) {
     
@@ -23,9 +29,7 @@ int main(int argc, const char * argv[]) {
         scanf("%d",&a[i]);
     }
     
-    for (int i = 0; i < n - 1; i++)
-        for (int j = 0; j < n - i - 1; j++)
-            if (a[j] > a[j + 1])std::swap(a[j], a[j + 1]);
+    qSort(a, 0, n-1);
 
     printf("Отсортированный массив: ");
     
@@ -36,3 +40,13 @@ int main(int argc, const char * argv[]) {
 
     
 }
+
+
+/**
+ 
+ @mainpage 
+ "Sorter" was developed by Alex Samorukov as a part of studying Technologies and Methods of Programming at BMSTU.\n
+ This website contains documentation and source code for the project.
+ */
+
+
